@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/models/product.dart';
+import 'package:ecommerce_app/screens/details/details_screen.dart';
 import 'package:ecommerce_app/screens/home/components/product_card.dart';
 import 'package:ecommerce_app/screens/home/components/section_title.dart';
 import 'package:ecommerce_app/size_config.dart';
@@ -26,6 +27,16 @@ class PopularProduct extends StatelessWidget {
                 demoProducts.length,
                 (index) => ProductCard(
                   product: demoProducts[index],
+                  press: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DetailsScreen(
+                          product: demoProducts[index],
+                        ),
+                      ),
+                    );
+                  },
                 ),
               ),
               SizedBox(

@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/constants.dart';
+import 'package:ecommerce_app/screens/cart/cart_screen.dart';
 import 'package:ecommerce_app/screens/home/components/icon_btn_with_counter.dart';
 import 'package:ecommerce_app/size_config.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +42,13 @@ class HomeHeader extends StatelessWidget {
           ),
           IconBtnWithCounter(
             svgsrc: 'assets/icons/Cart Icon.svg',
-            press: () {},
+            press: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const CartScreen(),
+                  ));
+            },
           ),
           IconBtnWithCounter(
             svgsrc: 'assets/icons/Bell.svg',

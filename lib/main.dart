@@ -1,4 +1,5 @@
 import 'package:ecommerce_app/constants.dart';
+import 'package:ecommerce_app/screens/profile/profile_screen.dart';
 import 'package:ecommerce_app/screens/routes.dart';
 import 'package:ecommerce_app/screens/splash/spalsh_screen.dart';
 import 'package:flutter/material.dart';
@@ -32,7 +33,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      initialRoute: SplashScreen.routename,
+      initialRoute: ProfileScreen.routename,
       routes: routes,
     );
   }

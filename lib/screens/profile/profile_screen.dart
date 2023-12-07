@@ -1,4 +1,6 @@
+import 'package:ecommerce_app/enums.dart';
 import 'package:ecommerce_app/screens/profile/components/body.dart';
+import 'package:ecommerce_app/screens/profile/components/custom-bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 
 class ProfileScreen extends StatelessWidget {
@@ -13,6 +15,9 @@ class ProfileScreen extends StatelessWidget {
         title: const Text('Profile'),
       ),
       body: const Body(),
+      bottomNavigationBar: const CustomBottomNavBar(
+        selectedmenu: Menustate.profile,
+      ),
     );
   }
 }
